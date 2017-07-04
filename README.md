@@ -1,5 +1,5 @@
-# scaiPy (Supply Chain Analytics in Python)
-scaiPy is a Python implementation of several analyses used in Supply Chain Analytics. The goal of writing this program is to programmatically solve problems encountered in some Supply Chain class assignments, and minimize tedious manual work in spreadsheet.
+# scadiPy (Supply Chain Analytics & Design in Python)
+scaiPy is a Python implementation of several analyses used in Supply Chain Analytics & Design. The goal of writing this program is to programmatically solve problems encountered in some Supply Chain Analytics and Design class assignments, thus minimizing tedious manual work in spreadsheet.
 
 # Table of Content
 * Clarke-Wright Savings Algorithm for Vehicle Routing Problem
