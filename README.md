@@ -1,5 +1,8 @@
 # scanalytics
-scanalytics is a Python implementation of several analyses used in Supply Chain Analytics & Design. The goal of writing this program is to programmatically solve problems encountered in some Supply Chain Analytics and Design class assignments, thus minimizing tedious manual work in spreadsheet.
+scanalytics is a Python implementation of several analyses used in Supply Chain
+Analytics & Design. The goal of writing this program is to programmatically
+solve problems encountered in some Supply Chain Analytics and Design class
+assignments, thus minimizing tedious manual work in spreadsheet.
 
 # Table of Content
 * Clarke-Wright Savings Algorithm for Vehicle Routing Problem
@@ -16,9 +19,11 @@ scanalytics is a Python implementation of several analyses used in Supply Chain 
 * NumPy
 * Pandas
 
-Alternatively, activate the environment in command prompt or terminal as follows.
+Alternatively, if you are using Anaconda, activate the environment in
+command prompt or terminal as follows.
 
-`source activate scanalytics.yaml`
+`conda env create -f scanalytics.yaml`
+`source activate scanalytics`
 
 # Installation
 Clone this repository as follows.
@@ -26,4 +31,5 @@ Clone this repository as follows.
 `git clone https://github.com/lmarkely/scanalytics.git`
 
 # Notes
-This is by no means a complete collection of all analyses. There are other repositories that cover Python implementation other analyses, e.g. [Dijkstra's Algorithm](https://gist.github.com/econchick/4666413).
+This is by no means a complete collection of all analyses. There are other
+repositories that cover Python implementation other analyses, e.g. [Dijkstra's Algorithm](https://gist.github.com/econchick/4666413).
