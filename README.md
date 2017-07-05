@@ -16,4 +16,11 @@ scanalytics is a Python implementation of several analyses used in Supply Chain 
 * NumPy
 * Pandas
 
+Alternatively, activate the environment in command prompt or terminal as follows.
+
+`source activate scanalytics.yaml`
+
 # Installation
+Clone this repository as follows.
+
+`git clone https://github.com/lmarkely/scanalytics.git`
