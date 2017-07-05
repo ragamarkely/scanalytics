@@ -9,3 +9,11 @@ scanalytics is a Python implementation of several analyses used in Supply Chain 
 * Silver Meal for Master Production Schedule
 * Fixed Order Quantity (FOQ) for Master Production Schedule
 * Periodic Order Quantity (POQ) for Master Production Schedule
+
+
+# Requirement
+* Python 3
+* NumPy
+* Pandas
+
+# Installation
