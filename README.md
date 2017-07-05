@@ -24,3 +24,6 @@ Alternatively, activate the environment in command prompt or terminal as follows
 Clone this repository as follows.
 
 `git clone https://github.com/lmarkely/scanalytics.git`
+
+# Notes
+This is by no means a complete collection of all analyses. There are other repositories that cover Python implementation other analyses, e.g. [Dijkstra's Algorithm](https://gist.github.com/econchick/4666413).
