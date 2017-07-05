@@ -22,8 +22,10 @@ assignments, thus minimizing tedious manual work in spreadsheet.
 Alternatively, if you are using Anaconda, activate the environment in
 command prompt or terminal as follows.
 
-`conda env create -f scanalytics.yaml`
-`source activate scanalytics`
+```
+conda env create -f scanalytics.yaml
+source activate scanalytics
+```
 
 # Installation
 Clone this repository as follows.
