@@ -3,7 +3,7 @@
 ![Plot](https://github.com/lmarkely/scanalytics/blob/master/scanalytics%20wallpaper.png)
 
 scanalytics is a Python implementation of several analyses used in Supply Chain
-Analytics & Design. The goal of writing this program is to programmatically
+Analytics & Design. I wrote this program to programmatically
 solve problems encountered in some Supply Chain Analytics and Design class
 assignments, thus minimizing tedious manual work in spreadsheet.
 
