@@ -17,11 +17,13 @@ assignments, thus minimizing tedious manual work on spreadsheet.
 * Periodic Order Quantity (POQ) for Master Production Schedule
 
 
+
+
 # Requirement
 * Python 3
 * NumPy
 * Pandas
-* pulp
+* PuLP
 
 Alternatively, if you are using Anaconda, activate the environment in
 command prompt or terminal as follows.
