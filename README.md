@@ -1,6 +1,6 @@
 # scanalytics
 
-![Plot](https://github.com/lmarkely/scanalytics/blob/master/scanalytics%20wallpaper.png)
+![Plot](scanalytics%20wallpaper.png)
 
 scanalytics is a Python implementation of several analyses used in Supply Chain
 Analytics & Design. I wrote this program to programmatically
