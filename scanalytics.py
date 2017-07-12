@@ -387,3 +387,68 @@ def MPS_FOQ(Q,demand_forecast,setup_cost,holding_cost,init_inventory):
 
     total_cost = total_setup_cost + total_holding_cost
     return inventory,prod_schedule,total_cost
+
+def MPS_POQ(t,demand_forecast,setup_cost,holding_cost,init_inventory):
+    '''
+    MPS using Periodic Order Quantity strategy.
+    argument:
+    t (float): interval time period between productions
+    demand_forecast (list): demand for each time period
+    setup_cost (float): fixed cost of setting up manufacturing
+    holding_cost (float): fixed cost of init_inventory
+    init_inventory(float): initial inventory
+    output:
+    inventory (list): inventory for each time period
+    quantity (list): quantity of product manufactured for each time period
+    total_cost (float): total cost of manufacturing and inventory
+    '''
+    #First check how many time period the current inventory can hold
+    init_prod = 0
+    while init_prod in range(len(demand_forecast)):
+        if np.sum(demand_forecast[:init_prod + 1]) <= init_inventory:
+            init_prod += 1
+        else: break
+
+    #Add 0 as the production during this period of using current inventory
+    for idx in range(init_prod):
+        if idx == 0:
+            prod_schedule.append(0)
+            inventory.append(init_inventory - demand_forecast[idx])
+        else:
+            prod_schedule.append(0)
+            inventory.append(inventory[idx-1] - demand_forecast[idx])
+
+    Q = sum(demand_forecast[init_prod:init_prod+t])
+    prod_schedule.append(Q)
+    if init_prod == 0:
+        inventory.append(init_inventory+Q-demand_forecast[init_prod])
+    else:
+        inventory.append(inventory[-1]+Q-demand_forecast[init_prod])
+    last_prod_time = init_prod
+
+    for time in range(init_prod+1,len(demand_forecast)):
+        if time - last_prod_time < t:
+            prod_schedule.append(0)
+            inventory.append(inventory[-1]-demand_forecast[time])
+        else:
+            Q = sum(demand_forecast[time:time+t])
+            prod_schedule.append(Q)
+            inventory.append(inventory[-1]+Q-demand_forecast[time])
+            last_prod_time = time
+
+    if inventory[-1] > 0:
+        prod_schedule[last_prod_time] -= inventory[-1]
+        inventory[last_prod_time] = inventory[last_prod_time-1]+Q-inventory[-1]-demand_forecast[last_prod_time]
+        for time in range(last_prod_time+1,len(demand_forecast)):
+            inventory[time] = inventory.append(inventory[time-1]-demand_forecast[time])
+
+    total_setup_cost = 0
+    for i in prod_schedule:
+        if i > 0: total_setup_cost += setup_cost
+
+    total_holding_cost = 0
+    for i in inventory:
+        if i > 0: total_holding_cost += i*holding_cost
+
+    total_cost = total_setup_cost + total_holding_cost
+    return inventory,prod_schedule,total_cost
