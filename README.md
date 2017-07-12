@@ -21,6 +21,7 @@ assignments, thus minimizing tedious manual work on spreadsheet.
 * Python 3
 * NumPy
 * Pandas
+* pulp
 
 Alternatively, if you are using Anaconda, activate the environment in
 command prompt or terminal as follows.
