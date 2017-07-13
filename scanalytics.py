@@ -71,7 +71,8 @@ def CWSA_savings(cwsa):
             saving = CWSA_mtx[i,-1] + CWSA_mtx[j,-1] - CWSA_mtx[i,j]
             CWSA_mtx[j,i] = saving
             CWSA_dict[(i+1,j+1)] = saving
-    CWSA_list = sorted(CWSA_dict.items(),key=operator.itemgetter(1),reverse=True)
+    CWSA_list = sorted(CWSA_dict.items(),key=operator.itemgetter(1),
+                       reverse=True)
     CWSA_savings_df = pd.DataFrame(CWSA_list)
     CWSA_df = pd.DataFrame(CWSA_mtx)
     return CWSA_df,CWSA_savings_df
