@@ -21,6 +21,7 @@ assignments, thus minimizing tedious manual work on spreadsheet.
 #### Example
 
 ```
+from scanalytics import *
 from IPython.display import display
 cwsa = CWSA()
 cwsa.add_dist(1,2,16.3)
