@@ -58,6 +58,21 @@ display(CWSA_df)
 display(CWSA_savings_df)
 ```
 
+## Mixed Integer Linear Programming for Master Production Schedule
+
+#### Example
+
+```
+from scanalytics import *
+from IPython.display import display
+
+demand_forecast = [1040,240,480,400,1600,4400,1440,1120,480,400,800,2000]
+setup_cost = 1822.5
+holding_cost = 0.3375
+init_inventory = 0
+
+status,inventory,prod_schedule,total_cost = MPS_MILP(demand_forecast,setup_cost,holding_cost,init_inventory)
+```
 
 # Requirement
 * Python 3
