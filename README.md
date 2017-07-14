@@ -78,7 +78,12 @@ status,inventory,prod_schedule,total_cost = MPS_MILP(demand_forecast,setup_cost,
 * Python 3
 * NumPy
 * Pandas
+<<<<<<< HEAD
 * PuLP
+||||||| parent of 7256a12... revise requirement
+=======
+* pulp
+>>>>>>> 7256a12... revise requirement
 
 Alternatively, if you are using Anaconda, activate the environment in
 command prompt or terminal as follows.
