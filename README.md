@@ -11,7 +11,7 @@ assignments, thus minimizing tedious manual work on spreadsheet.
 * Clarke-Wright Savings Algorithm for Vehicle Routing Problem
 * Mixed Integer Linear Programming for Master Production Schedule
 * One Time Run for Master Production Schedule
-* Lot for Lot for Master Production Schedule
+* Lot for Lot (Chase) for Master Production Schedule
 * Silver Meal for Master Production Schedule
 * Fixed Order Quantity (FOQ) for Master Production Schedule
 * Periodic Order Quantity (POQ) for Master Production Schedule
@@ -89,6 +89,22 @@ holding_cost = 0.3375
 init_inventory = 0
 
 inventory,prod_schedule,total_cost = MPS_onetime(demand_forecast,setup_cost,holding_cost,init_inventory)
+```
+
+## Lot for Lot (Chase) for Master Production Schedule
+
+#### Example
+
+```
+from scanalytics import *
+from IPython.display import display
+
+demand_forecast = [1040,240,480,400,1600,4400,1440,1120,480,400,800,2000]
+setup_cost = 1822.5
+holding_cost = 0.3375
+init_inventory = 0
+
+inventory,prod_schedule,total_cost = MPS_chase(demand_forecast,setup_cost,holding_cost,init_inventory)
 ```
 
 # Requirement
