@@ -403,6 +403,10 @@ def MPS_POQ(t,demand_forecast,setup_cost,holding_cost,init_inventory):
     quantity (list): quantity of product manufactured for each time period
     total_cost (float): total cost of manufacturing and inventory
     '''
+
+    prod_schedule = []
+    inventory = []
+
     #First check how many time period the current inventory can hold
     init_prod = 0
     while init_prod in range(len(demand_forecast)):
