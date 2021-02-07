@@ -157,7 +157,7 @@ source activate scanalytics
 # Installation
 Clone this repository as follows.
 
-`git clone https://github.com/lmarkely/scanalytics.git`
+`git clone https://github.com/ragamarkely/scanalytics.git`
 
 # Notes
 This is by no means a complete collection of all analyses. There are other
